@@ -36,7 +36,7 @@ pipeline{
     }
     post { 
         always { 
-            archiveArtifacts artifacts: 'summary.html', fingerprint: true
+            archiveArtifacts artifacts: 'summary.html'
 
         }
     }
