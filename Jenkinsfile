@@ -15,6 +15,9 @@ pipeline{
         string(name: 'CHARGE_STAGE_3', defaultValue: '0', description: 'Choisir la charge stage 1')
     }
     stages{
+        stage('affichage des params'){
+            echo 'k6 run --stage ${params.TEMPS_STAGE_1}:${params.CHARGE_STAGE_1} --stage ${params.TEMPS_STAGE_2}:${params.CHARGE_STAGE_2} --stage ${params.TEMPS_STAGE_3}:${params.CHARGE_STAGE_3} ${params.CHOICE}'
+        }
         stage('version de k6'){
             steps{
                 sh 'k6 -v'
