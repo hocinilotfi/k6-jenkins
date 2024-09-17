@@ -30,7 +30,7 @@ pipeline{
         }
         stage('run test'){
             steps{
-                sh 'k6 run --stage ${params.TEMPS_STAGE_1}:${params.CHARGE_STAGE_1} --stage ${params.TEMPS_STAGE_2}:${params.CHARGE_STAGE_2} --stage ${params.TEMPS_STAGE_3}:${params.CHARGE_STAGE_3} ${params.CHOICE}'
+                sh "k6 run --stage ${params.TEMPS_STAGE_1}:${params.CHARGE_STAGE_1} --stage ${params.TEMPS_STAGE_2}:${params.CHARGE_STAGE_2} --stage ${params.TEMPS_STAGE_3}:${params.CHARGE_STAGE_3} ${params.CHOICE}"
             }
         }
     }
