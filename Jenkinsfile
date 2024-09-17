@@ -37,7 +37,6 @@ pipeline{
     post { 
         always { 
             archiveArtifacts artifacts: 'summary.html', fingerprint: true
-            echo 'I will always say Hello again!'
 
         }
     }
